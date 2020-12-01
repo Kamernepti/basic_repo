@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/book.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books & Authors</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="Book">
+            <h1>{{book.title}}</h1>
+            <p>ID:</p>
+            <p>Description:</p>
+        </div>
+        <div id ="authors">
+            <ul>Authors
+                <li>example</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
