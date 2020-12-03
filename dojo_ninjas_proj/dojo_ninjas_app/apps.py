@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class DojoNinjasAppConfig(AppConfig):
-    name = 'dojo_ninjas_app'
+class DojoNinjaAppConfig(AppConfig):
+    name = 'dojo_ninja_app'
