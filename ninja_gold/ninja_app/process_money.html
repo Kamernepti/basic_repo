@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process Money</title>
+</head>
+<body>
+    <h1>Total Gold: {{request.session.counter}} </h1>
+    <h2>Farm Total: {{request.session.farmcounter}}</h2>
+    <!-- <h2>Cave Total: {{request.session.cavecounter}} </h2> -->
+    <!-- <h2>House Total: {{request.session.housecounter}} </h2> -->
+    <form action = "/reset" method="post">
+        {% csrf_token %}
+        <button><a href = "/reset">RESET</a></button>
+    </form>
+    <form action = "/" method="get">
+        {% csrf_token %}
+        <button>Go Back</button>
+    </form>
+    
+</body>
+</html>
