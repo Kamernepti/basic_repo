@@ -1,0 +1,17 @@
+h1 {
+    margin-left: 200px;
+}
+
+table {
+    padding: 0px;
+}
+
+th {
+    border: 1px solid black;
+    width: 150px;
+    background-color: gray;
+}
+
+td {
+    border: 1px solid black;
+}

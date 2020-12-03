@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href = "{% static 'style.css'%}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C+R Users</title>
+</head>
+<body>
+    <h1>All the Users</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user in data %}
+            <tr>
+                <td>{{user.id }}</td>
+                <td>{{user.first_name}} {{user.last_name}} </td>
+                <td>{{user.email_address}} </td>
+                <td>{{user.age}} </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <h2>Add a User</h2>
+    <form action='/process' method = "post">
+        {% csrf_token %}
+        <p>First Name: 
+            <input type="text" name="first_name" class="form-control">
+        </p>
+        <p>Last Name: 
+            <input type="text" name="last_name" class="form-control">
+        </p>
+        <p>Email: 
+            <input type="email" name="email_address" class="form-control">
+        </p>
+        <p>Age: 
+            <input type="number" name="age" class="form-control">
+        </p>
+        <button type = "submit">Add</button>
+    </form>
+</body>
+</html>
